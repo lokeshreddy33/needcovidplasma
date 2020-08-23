@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="covid-19 plasma donors and patients connecting platform">
+    <meta name="keywords" content="COID-19,Plasma,HTML,CSS,JavaScript,Donors,Patients,Volunteers">
+    <title>Volunteer Form | NeedCovidPlasma</title>
+    <link rel="stylesheet" href="css/volunteer_style.css">
+    <link rel="shortcut icon" href="images/mainLogo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- beginning of the navbar  -->
+    
+    <nav class="navbar">
+        
+        <div class="brand-title"><a href="index.html"><img class="mainLogoImage" src="images/mainLogo.png" alt="logo" width="50px">Need<span class="covidred">Covid</span>Plasma.in</a></div>
+        <a href="#" class="toggle-button">
+            <span class="bar" id="span1"></span>
+            <span class="bar" id="span2"></span>
+            <span class="bar" id="span3"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+              <li><a href="donor_form.html">Donate Plasma</a></li>
+              <li><a href="patient_form.html">Request Plasma</a></li>
+              <li><a href="volunteer_form.html">Volunteer</a></li>
+              <li><a href="index.html#ourmission_Id">Our Mission</a></li>
+              <li><a href="index.html#othersites_Id">Other Sites</a></li>
+              <li><a href="index.html#contact_form_id">Contact Us</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- volunteer form  -->
+
+    <section class="contactForm_Section">
+        <div class="contactForm_container">
+          <p class="form_tagline">Join as a volunteer and be a part of your mission against Covid-19</p>  
+          <p class="volunteer_info">Register with us as a volunteer and help fight COVID-19.Being a volunteer  you can motivate recovered COVID-19 patients to donate plasma.Registered volunteers get email alerts in cases of emergency.Just a little step from you might help take a person back to their family. Please join hands with us in making a difference to lives around us. Volunteers don't need to be recovered COVID-19 patients. Together lets fight this,the world needs us now more than ever.
+          <p class="volunteer_info">Filling out this form will only take 2 minutes and it could save someone's life.We will not ask you for any information we do not need.All information remains confidential.</p>
+          <div class="contactForm_wrapper">
+            <div class="contactForm_contact-info">
+                <h1 class="contactForm_brand"><span>Volunteer</span> <br> registration form</h1>
+             
+            </div>
+            <div class="contactForm_contact">
+              <h3>Fill here </h3>
+              
+              <form id="contactForm_contactForm">
+                <p class="full">
+                  <label>First Name</label>
+                  <input type="text" name="name" id="name" required>
+                </p>
+                
+                <p class="full">
+                  <label>Email Address</label>
+                  <input type="email" name="email" id="email" required>
+                </p>
+                <p class="full">
+                  <label>Phone Number</label>
+                  <input type="text" name="phone" id="phone">
+                </p>
+                <!-- <p class="full">
+                  <label>Message</label>
+                  <textarea name="message" rows="5" id="message"></textarea>
+                </p> -->
+                <p class="confirmation_submit full">By submitting the form,you confirm that you have gone through the above mentioned details</p>
+
+                <p class="full">
+                  <button type="submit">Submit</button>
+                </p>
+                <div class="contactForm_alert">You have been registered as a volunteer</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- this is  a footer  -->
+    <footer>
+        <div class="footerclass"> 
+            <div class="footerTagline">
+                Let's together fight the war against <span class="covidred">Covid</span> 
+            </div>
+            
+            <div class="footerCopyRight">
+                Copyright © 2020 <a href="index.html"> Need <span class="covidred">Covid</span>Plasma.in</a> 
+            </div>
+            
+            <div class="footerHopeBest">
+                <span >Hope for the best</span>
+            </div> 
+        </div>
+    </footer>
+
+    <!-- js files extensions linking  -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script> 
+
+    <script src="js/forms_resp.js"></script>
+    <script src="js/volunteer_form_js.js"></script>
+</body>
+</html>

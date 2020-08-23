@@ -1,0 +1,689 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0px;
+    padding:0px;
+}
+
+.navbar{
+    /* position: fixed; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:black;
+    background-color: white;
+    box-shadow:0px 0px 15px grey;
+}
+
+.brand-title{
+    font-size: 20px;
+    margin: 1rem;
+}
+
+.brand-title a{
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+}
+
+.covidred{ 
+    color: red;
+}
+
+.navbar-links ul{
+    margin:0;
+    padding:0;
+    display: flex;
+}
+
+.navbar-links li{
+    list-style: none;
+}
+
+.navbar-links li a{
+    text-decoration: none;
+    color:black;
+    padding:15px;
+    display: block;
+    font-size: 18px;
+    /* font-weight: bold; */
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: 'Merriweather', serif;
+}
+
+.navbar-links li a:hover{
+    /* background-color: black; */
+    font-size: 19px;
+    color: red;
+    text-decoration: underline;
+}
+
+.toggle-button{
+    position: absolute;
+    top:1rem;
+    right:1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width:30px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+    height: 5px;
+    width:100%;
+    background-color:black;
+    border-radius: 10px;
+}
+
+@media (max-width:1200px){
+    
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li{
+        text-align: center;
+    }
+    
+    .brand-title{
+        font-size:20px;
+        margin: 1rem;
+        /* align-items: center; */
+    }
+    
+    .navbar-links.active{
+        display: flex;
+    }
+
+}
+
+/* This is the begining of the section - main section  */
+
+ .mainSection_services{
+    /* background:white; */
+    text-align: center;
+    margin: 0px;
+
+} 
+
+/* .mainSection_services h1{
+    display: inline-block;
+    font-size: 25px;
+    text-transform: uppercase;
+    border-bottom:4px solid red;
+    padding-bottom: 10px;
+    margin-top:40px;
+    font-family: 'Merriweather', serif;
+} */
+
+.mainSection_cen{
+    max-width: 1200px;
+    margin:auto;
+    overflow:hidden;
+    padding:10px;
+}
+
+.mainSection_service{
+    display:inline-block;
+    width:33%;
+    margin:0 -2px;
+    padding:40px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.4s;
+    /* height: 80vh; */
+}
+.mainSection_service:hover{
+    background: #dddddd;
+    
+}
+
+.mainSection_service h2{
+    font-family: 'Merriweather', serif;
+    font-size:20px;
+    margin:0;
+    padding-bottom: 10px;
+}
+
+.mainSection_service button{
+    background-color: grey;
+    color:white;
+    height: 80px;
+    width:300px;
+    font-size: 25px;
+    font-family: 'Merriweather', serif;
+    padding:20px;
+    border:5px solid black;
+    border-radius: 10px;
+}
+
+.mainSection_service button:hover{
+    background-color: black;
+    color:red;
+    height: 80px;
+    width:300px;
+    font-size: 27px;
+    font-family: 'Merriweather', serif;
+    padding:20px;
+    border:5px solid black;
+    cursor: pointer;
+    /* border-radius: 30px; */
+}
+
+.boldMainSection{
+    font-weight: bold;
+    /* font-size: 30px; */
+}
+
+.mainSection_services p{
+    /* font-size: 30px; */
+    padding-top: 30px;
+}
+
+.mainline {
+    font-family: 'Merriweather', serif;
+    font-size: 23px;
+}
+.submainline{
+    font-family: 'Merriweather', serif;
+    font-size: 21px;
+}
+
+.subsubmainline{
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+}
+
+
+@media screen and (max-width:1200px){
+    .mainSection_service{
+        width:100%;
+    }
+    .mainSection_service h2{
+        font-size: 20px;
+    }
+    .mainSection_service p{
+        font-size: 20px;
+    }
+    .mainSection_service{
+        padding:10px;
+    }
+    .mainSection_services p{
+        font-size: 15px;
+    }
+    .mainSection_service button{
+        font-size: 20px;
+    }
+    .mainSection_service button:hover{
+        font-size: 22px;
+    }
+
+}
+
+ /* Our impacts so far  */
+
+.services{
+    background:#f1f1f1;
+    text-align: center;
+    /* margin: 0px; */
+
+}
+
+.services h1{
+    display: inline-block;
+    font-size: 25px;
+    /* text-transform: uppercase; */
+    border-bottom:3px solid red;
+    padding-bottom: 10px;
+    margin-top:40px;
+    font-family: 'Merriweather', serif;
+}
+
+.cen{
+    max-width: 1200px;
+    margin:auto;
+    overflow:hidden;
+    padding:20px;
+}
+
+.service{
+    display:inline-block;
+    width:33%;
+    margin:0 -2px;
+    padding:40px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.service:hover{
+    background: #dddddd;
+}
+
+.service h2{
+    font-family: 'Merriweather', serif;
+    font-size:18px;
+    margin:0;
+}
+.service p{
+    color:grey;
+    font-size: 20px;
+    font-family: 'Merriweather', serif;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+    /* color: #1c87c9; */
+    font-size: 10px;
+    
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+@media screen and (max-width:1200px){
+    .service{
+        width:50%;
+    }
+    .service h2{
+        font-size: 18px;
+    }
+    .service p{
+        font-size: 20px;
+    }
+    .service{
+        padding:10px;
+    }
+   
+}
+
+@media screen and (max-width:800px){
+    .service{
+        width:100%;
+    }
+    .service h2{
+        font-size: 18px;
+    }
+    .service p{
+        font-size: 20px;
+    }
+    .service{
+        padding:10px;
+    }
+    
+}
+
+
+/* Our mission section  */
+ 
+.missionSection{
+    /* height:100vh; */
+    background-color:white;
+    text-align: center;
+    justify-content: center;
+    /* border:2px solid red; */
+}
+
+
+
+.missionSection_container h1{
+    padding-top: 30px;
+    padding-left: 20px;
+    font-size:30px;
+    font-family: 'Merriweather', serif;
+    /* text-align: left; */
+
+}
+
+/* .missionSection_container p{
+    max-width: 1200px;
+    text-align: center;
+    align-items: center;
+} */
+
+.mission_para{
+    font-size: 15px;
+    font-family: 'Merriweather', serif;
+}
+
+.policy_para{
+    font-size: 15px;
+    font-family: 'Merriweather', serif;
+}
+
+@media screen and (max-width:1200px){
+
+    .mission_para{
+        font-size: 12px;
+        font-family: 'Merriweather', serif;
+    }
+    
+    .policy_para{
+        font-size: 12px;
+        font-family: 'Merriweather', serif;
+    }
+
+}
+
+/* other service sites  */
+
+.otherSites_services{
+    background:#f1f1f1;
+    text-align: center;
+
+    /* margin: 0px; */
+}
+
+.otherSites_services h1{
+    display: inline-block;
+    font-size: 25px;
+    /* text-transform: uppercase; */
+    border-bottom:4px solid red;
+    padding-bottom: 20px;
+    margin-top:40px;
+    font-family: 'Merriweather', serif;
+}
+
+.otherSites_cen a{
+    padding: 10px;
+}
+
+.otherSites_cen{
+    max-width: 1200px;
+    margin:auto;
+    overflow:hidden;
+    padding:20px;
+}
+
+.otherSites_service{
+    display:inline-block;
+    width:33%;
+    margin:0 -2px;
+    padding:40px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.otherSites_service:hover{
+    background: #dddddd;
+    text-decoration: underline;
+}
+
+.otherSites_service h2{
+    font-family: 'Merriweather', serif;
+    font-size:17px;
+    color: black;
+    margin:0;
+}
+.otherSites_service h2:hover{
+    font-family: 'Merriweather', serif;
+    font-size:20px;
+    color: red;
+    margin:0;
+}
+
+@media screen and (min-width:801px){
+    .otherSites_services{
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width:1400px){
+    .otherSites_service{
+        width:50%;
+    }
+    .otherSites_service h2{
+        font-size: 18px;
+    }
+    .otherSites_service p{
+        font-size: 20px;
+    }
+    .otherSites_service{
+        padding:10px;
+    }
+   
+}
+
+@media screen and (max-width:800px){
+    .otherSites_service{
+        width:100%;
+    }
+    .otherSites_service h2{
+        font-size: 18px;
+    }
+    .otherSites_service p{
+        font-size: 20px;
+    }
+    .otherSites_service{
+        padding:10px;
+    }
+    
+}
+
+
+/* Contact form  */
+
+.contactForm_Section{
+    background:white;
+  }
+  
+  .contactForm_container{
+    background:white;
+    color:#485e74;
+    line-height:1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:1em;
+  }
+  
+  .contactForm_container{
+    max-width:1170px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:1em;
+  }
+
+  .contactForm_contact{
+    font-size: 20px;
+
+  }
+  
+  .contactForm_alert{
+    font-size: 20px;
+  }
+
+  ul{
+    list-style: none;
+    padding:0;
+  }
+  
+  .contactForm_brand{
+    text-align: center;
+    font-size: 40px;
+  }
+  
+  .contactForm_brand span{
+    color:#fff;
+  }
+  
+  .contactForm_wrapper{
+    box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+  }
+  
+  .contactForm_wrapper > *{
+    padding: 1em;
+  }
+  
+  .contactForm_contact-info{
+    background:whitesmoke;
+    font-size: 17px;
+  }
+  
+  .contactForm_contact-info h3, .contactForm_contact-info ul{
+    text-align: center;
+
+    margin:0 0 1rem 0;
+  }
+  
+  .contactForm_contact{
+    background:#ffffff;
+  }
+  
+  /* FORM STYLES */
+  .contactForm_contact form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:10px;
+  }
+  
+  .contactForm_contact form label{
+    display:block;
+    font-size: 20px;
+    /* font-weight: bold; */
+  }
+
+  .contactForm_contact form p{
+    margin:0;
+  }
+  
+  .contactForm_contact form .full{
+    grid-column: 1 / 3;
+  }
+  
+  .contactForm_contact form button, .contactForm_contact form input, .contactForm_contact form textarea{
+    width:100%;
+    padding:1em;
+    border:1px solid grey;
+    font-size: 18px;
+  }
+  
+  .contactForm_contact form button{
+    background:grey;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border:0;
+    text-transform: uppercase;
+  }
+  
+  .contactForm_contact form button:hover,.contactForm_contact form button:focus{
+    background:black;
+    color:#fff;
+    outline:0;
+    transition: background-color 1s ease-out;
+  }
+  
+  .contactForm_alert{
+    text-align: center;
+    padding:10px;
+    background:#79c879;
+    color:#fff;
+    margin-bottom:10px;
+    display:none;
+  }
+  
+  /* LARGE SCREENS */
+  @media(min-width:1200px){
+
+    .missionSection{
+        height:100vh;
+        background: white;
+        text-align: center;
+        justify-content: center;
+        /* border:2px solid grey; */
+    }
+
+    .mainSection{
+        height: 80vh;
+    }
+
+    .services{
+        height: 100vh;
+    }
+
+
+    .contactForm_wrapper{
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+  
+    .contactForm_wrapper > *{
+      padding:2em;
+    }
+  
+    .contactForm_company-info h3, .contactForm_contact-info ul, .contactForm_brand{
+      text-align: left;
+    }
+
+    .contactForm_contact form button, .contactForm_contact form input, .contactForm_contact form textarea{
+      width:100%;
+      padding:1em;
+      border:1px solid #c9e6ff;
+      font-size: 17px;
+    }
+
+  }
+
+
+
+/* footer part  */
+
+.footerclass{
+    /* border: 2px solid red; */
+    background-color: black;
+    color: white;
+    height:130px;
+    text-align: center;
+  }
+  
+  .footerTagline{
+    font-size: 15px;
+    font-family: 'Merriweather', serif;
+    padding: 10px;
+  }
+  
+  .footerclassCovid{
+  color: red;
+  }
+  
+  .footerCopyRight {
+    font-size: 12px;
+    font-family: 'Merriweather', serif;
+    padding: 10px;
+  }
+  
+  .footerCopyRight a{
+   text-decoration: none;
+   color: white;
+  }
+  
+  .footerHopeBest{
+    color:gray;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    padding: 10px;
+  }
+  
+  .footerCopyRight a:hover{
+    text-decoration: underline;
+    color: white;
+    font-size: 14px;
+  }

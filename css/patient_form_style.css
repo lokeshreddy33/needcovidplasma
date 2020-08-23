@@ -1,0 +1,419 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin:0px;
+  padding:0px;
+}
+
+.navbar{
+  /* position: fixed; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:black;
+  background-color: white;
+  box-shadow:0px 0px 15px grey;
+}
+
+.brand-title{
+  font-size: 20px;
+  margin: 1rem;
+}
+
+.brand-title a{
+  color:black;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+}
+
+.covidred{ 
+  color: red;
+}
+
+.navbar-links ul{
+  margin:0;
+  padding:0;
+  display: flex;
+}
+
+.navbar-links li{
+  list-style: none;
+}
+
+.navbar-links li a{
+  text-decoration: none;
+  color:black;
+  padding:15px;
+  display: block;
+  font-size: 18px;
+  /* font-weight: bold; */
+  /* font-family: 'Times New Roman', Times, serif; */
+  font-family: 'Merriweather', serif;
+}
+
+.navbar-links li a:hover{
+  /* background-color: black; */
+  font-size: 19px;
+  color: red;
+  text-decoration: underline;
+}
+
+.toggle-button{
+  position: absolute;
+  top:1rem;
+  right:1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width:30px;
+  height: 21px;
+}
+
+.toggle-button .bar{
+  height: 5px;
+  width:100%;
+  background-color:black;
+  border-radius: 10px;
+}
+
+@media (max-width:1200px){
+  
+  .toggle-button{
+      display: flex;
+  }
+  .navbar-links{
+      display: none;
+      width: 100%;
+  }
+
+  .navbar{
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navbar-links ul{
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links li{
+      text-align: center;
+  }
+  
+  .brand-title{
+      font-size:20px;
+      margin: 1rem;
+      /* align-items: center; */
+  }
+  
+  .navbar-links.active{
+      display: flex;
+  }
+
+}
+
+
+
+/* Volunteer Contact form  */
+
+/* .contactForm_Section{
+    background:white;
+  } */
+  
+  .contactForm_container{
+    /* padding-bottom: 20px; */
+    /* background:white; */
+    color:#485e74;
+    line-height:1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:1em;
+  }
+  
+  .contactForm_container{
+    max-width:1170px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:1em;
+  }
+
+  .contactForm_contact{
+    font-size: 20px;
+
+  }
+
+  .patient_info{
+    font-size: 16px;
+    font-family: 'Merriweather', serif;
+  }
+  
+  .contactForm_alert{
+    font-size: 20px;
+  }
+
+  ul{
+    list-style: none;
+    padding:0;
+  }
+  
+  .contactForm_brand{
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .contactForm_brand span{
+    color:black;
+  }
+
+  .confirmation_submit{
+    font-size: 15px;
+  }
+  
+  .contactForm_wrapper{
+    box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+  }
+  
+  .contactForm_wrapper > *{
+    padding: 1em;
+  }
+  
+  .contactForm_contact-info{
+    background:whitesmoke;
+    font-size: 17px;
+  }
+  
+  .contactForm_contact-info h3, .contactForm_contact-info ul{
+    text-align: center;
+
+    margin:0 0 1rem 0;
+  }
+  
+  .contactForm_contact{
+    background:#ffffff;
+  }
+  
+  /* FORM STYLES */
+  .contactForm_contact form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:10px;
+  }
+  
+  .contactForm_contact form label{
+    display:block;
+    font-size: 20px;
+    /* font-weight: bold; */
+  }
+
+  .contactForm_contact form p{
+    margin:0;
+  }
+  
+  .contactForm_contact form .full{
+    grid-column: 1 / 3;
+  }
+  
+  .contactForm_contact form select{
+    width:100px;
+    font-size:20px;
+    font-family: 'Merriweather', serif;
+    height: 50px;
+  }
+
+  #stateSelect{
+    width:100%;
+    
+  }
+
+  #districtSelect{
+    width:100%;
+    
+  }
+
+  .contactForm_contact form button, .contactForm_contact form input, .contactForm_contact form textarea,.contactForm_contact form option{
+    width:100%;
+    padding:1em;
+    border:1px solid #3f5364;
+    font-size: 18px;
+  }
+  
+  .contactForm_contact form button{
+    background:grey;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border:0;
+    text-transform: uppercase;
+  }
+  
+  .contactForm_contact form button:hover,.contactForm_contact form button:focus{
+    background:black;
+    color:#fff;
+    outline:0;
+    transition: background-color 1s ease-out;
+  }
+  
+  .contactForm_alert{
+    text-align: center;
+    padding:10px;
+    background:#79c879;
+    color:#fff;
+    margin-bottom:10px;
+    display:none;
+  }
+  
+  /* LARGE SCREENS */
+  @media(min-width:1200px){
+
+    .mainSection{
+        height: 80vh;
+    }
+
+    .services{
+        height: 100vh;
+    }
+
+
+    .contactForm_wrapper{
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+  
+    .contactForm_wrapper > *{
+      padding:2em;
+    }
+  
+    .contactForm_company-info h3, .contactForm_contact-info ul, .contactForm_brand{
+      text-align: left;
+    }
+
+    .contactForm_contact form button, .contactForm_contact form input, .contactForm_contact form textarea{
+      width:100%;
+      padding:1em;
+      border:1px solid #c9e6ff;
+      font-size: 17px;
+    }
+
+  }
+
+
+
+/* results section  */
+
+.results{
+  align-content: center;
+  text-align: center;
+  background: whitesmoke;
+  font-family: 'Merriweather', serif;
+  border:2px solid whitesmoke;
+  padding: 30px;
+  
+}
+.results_section_heading{
+  font-size: 30px;
+  
+  /* padding-top: 0px;  */
+}
+
+.matched_donors_data p{
+  font-size: 18px;
+  font-family: 'Merriweather', serif;
+}
+
+.matched_donors_data{
+  font-size: 25px;
+  font-family: 'Merriweather', serif;
+}
+
+.donor_shown{
+  background: white;
+  align-content: center;
+  border:2px solid black;
+}
+
+.mail_to_volunteer{
+  border:3px solid red; 
+}
+
+.mail_to_vol_info{
+  font-size: 30px;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+}
+
+.mail_to_vol_info_second_line{
+  font-size: 20px;
+  font-family: 'Merriweather', serif;
+}
+
+.mail_alert_button{
+  width:240px;
+  height: 80px;
+  background-color: gainsboro;
+  color:black;
+  font-size: 30px;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+  /* border-radius: 10px; */
+}
+
+.mail_alert_button:hover{
+  background-color: black;
+  color:red;
+  font-size: 32px;
+}
+
+.mailing_confirmation{
+  font-size: 25px;
+  color:red;
+  font-family: 'Merriweather', serif; 
+  font-weight: bold;
+  /* display: none; */
+}
+
+/* footer part  */
+
+.footerclass{
+  /* border: 2px solid red; */
+  background-color: black;
+  color: white;
+  height:130px;
+  text-align: center;
+}
+
+.footerTagline{
+  font-size: 15px;
+  font-family: 'Merriweather', serif;
+  padding: 10px;
+}
+
+.footerclassCovid{
+color: red;
+}
+
+.footerCopyRight {
+  font-size: 12px;
+  font-family: 'Merriweather', serif;
+  padding: 10px;
+}
+
+.footerCopyRight a{
+ text-decoration: none;
+ color: white;
+}
+
+.footerHopeBest{
+  color:gray;
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+  padding: 10px;
+}
+
+.footerCopyRight a:hover{
+  text-decoration: underline;
+  color: white;
+  font-size: 14px;
+}

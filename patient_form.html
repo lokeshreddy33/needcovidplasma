@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="covid-19 plasma donors and patients connecting platform">
+    <meta name="keywords" content="COID-19,Plasma,HTML,CSS,JavaScript,Donors,Patients,Volunteers">
+    <title>Request Form | NeedCovidPlasma</title>
+    <link rel="stylesheet" href="css/patient_form_style.css">
+    <link rel="shortcut icon" href="images/mainLogo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+    <script type="text/javascript">
+
+        var statebyDistrict = {
+        
+        Andaman_and_Nicobar_Islands:["Choose Your District","Nicobar","North and Middle Andaman","South Andaman"],
+        Andhra_Pradesh:["Choose Your District","Anantapur","Chittoor","East Godavari","Guntur","YSR Kadapa","Krishna","Kurnool","Nellore","Prakasam","Srikakulam","Visakhapatnam","Vizianagaram","West Godavari"],
+        Arunachal_Pradesh:["Choose Your District","Anjaw","Changlang","East Kameng","East Siang","Kamle","Kra Daadi","Kurung Kumey","Lepa Rada","Lohit","Longding","Lower Dibang Valley","Lower Siang","Lower Subansiri","Namsai","Pakke-Kessang","Papum Pare","Shi Yomi","Siang","Tawang","Tirap","Upper Dibang Valley","Upper Siang","Upper Subansiri","West Kameng","West Siang"],
+        Assam:["Choose Your District","Baksa","Barpeta","Bishwanath","Bongaigaon","Cachar","Charaideo","Chirang","Darrang","Dhemaji","Dhubri","Dibrugarh","Dima Hasao","Goalpara","Golaghat","Hailakandi","Hojai","Jorhat","Kamrup","Kamrup Metropolitan","Karbi Anglong","Karimganj","Kokrajhar","Lakhimpur","Majuli","Marigaon","Nagaon","Nalbari","Sivasagar","South Salmara","Sonitpur","Tinsukia","Udalguri","West Karbi Anglong"],
+        Bihar:["Choose Your District","Araria","Arwal","Aurangabad","Banka","Begusarai","Bhagalpur","Bhojpur","Buxar","Darbhanga","East Champaran","Gaya","Gopalganj","Jamui","Jehanabad","Kaimur","Katihar","Khagaria","Kishanganj","Lakhisarai","Madhepura","Madhubani","Munger","Muzaffarpur","Nalanda","Nawada","Patna","Purnia","Rohtas","Saharsa","Samastipur","Saran","Sheikhpura","Sheohar","Sitamarhi","Siwan","Supaul","Vaishali","West Champaran"],
+        Chandigarh:["Choose Your District","Chandigarh"],
+        Chhattisgarh:["Choose Your District","Balod","Baloda Bazar","Balrampur","Bastar","Bemetara","Bijapur","Bilaspur","Dantewada","Dhamtari","Durg","Gariaband","Gaurela-Pendra-Marwahi","Janjgir-Champa","Jashpur","Kabirdham","Kanker","Kondagaon","Korba","Koriya","Mahasamund","Mungeli","Narayanpur","Raigarh","Raipur","Rajnandgaon","Sukma","Surajpur","Surguja"],
+        Dadra_and_Nagar_Haveli_and_Daman_and_Diu:["Choose Your District","Daman","Diu","Dadra and Nagar Haveli"],
+        Delhi:["Choose Your District","Central Delhi","East Delhi","New Delhi","North Delhi","North East Delhi","North West Delhi","Shahdara","South Delhi","South East Delhi","South West Delhi","West Delhi"],
+        Goa:["Choose Your District","North Goa","South Goa"],
+        Gujarat:["Choose Your District","Ahmedabad","Amreli","Anand","Aravalli","Banaskantha","Bharuch","Bhavnagar","Botad","Chhota Udepur","Dahod","Dang","Devbhoomi Dwarka","Gandhinagar","Gir Somnath","Jamnagar","Junagadh","Kheda","Kutch","Mahisagar","Mehsana","Morbi","Narmada","Navsari","Panchmahal","Patan","Porbandar","Rajkot","Sabarkantha","Surat","Surendranagar","Tapi","Vadodara","Valsad"],
+        Haryana:["Choose Your District","Ambala","Bhiwani","Charkhi Dadri","Faridabad","Fatehabad","Gurgaon","Hissar","Jhajjar","Jind","Kaithal","Karnal","Kurukshetra","Mahendragarh","Nuh","Palwal","Panchkula","Panipat","Rewari","Rohtak","Sirsa","Sonipat","Yamuna Nagar"],
+        Himachal_Pradesh:["Choose Your District","Bilaspur","Chamba","Hamirpur","Kangra","Kinnaur","Kullu","Lahaul and Spiti","Mandi","Shimla","Sirmaur","Solan","Una"],
+        Jammu_and_Kashmir:["Choose Your District","Anantnag","Bandipora","Baramulla","Badgam","Doda","Ganderbal","Jammu","Kathua","Kishtwar","Kulgam","Kupwara","Poonch","Pulwama","Rajouri","Ramban","Reasi","Samba","Shopian","Srinagar","Udhampur"],
+        Jharkhand:["Choose Your District","Bokaro","Chatra","Deoghar","Dhanbad","Dumka","East Singhbhum","Garhwa","Giridih","Godda","Gumla","Hazaribag","Jamtara","Khunti","Koderma","Latehar","Lohardaga","Pakur","Palamu","Ramgarh","Ranchi","Sahibganj","Seraikela Kharsawan","Simdega","West Singhbhum"],
+        Karnataka:["Choose Your District","Bagalkot","Ballari","Belgaum","Bangalore Rural","Bangalore Urban","Bidar","Chamarajanagara","Chikkaballapura","Chikmagalur","Chitradurga","Dakshina Kannada","Davanagere","Dharwad","Gadag","Gulbarga","Hassan","Haveri","Kodagu","Kolar","Koppal","Mandya","Mysore","Raichur","Ramanagara","Shimoga","Tumakuru","Udupi","Uttara Kannada","Bijapur","Yadgir"],
+        Kerala:["Choose Your District","Alappuzha","Ernakulam","Idukki","Kannur","Kasaragod","Kollam","Kottayam","Kozhikode","Malappuram","Palakkad","Pathanamthitta","Thrissur","Thiruvananthapuram","Wayanad"],
+        Ladakh:["Choose Your District","Kargil","Leh"],
+        Lakshadweep:["Choose Your District","Lakshadweep"],
+        Madhya_Pradesh:["Choose Your District","Agar Malwa","Alirajpur","Anuppur","Ashok Nagar","Balaghat","	Barwani","Betul","Bhind","Bhopal","Burhanpur","Chachaura-Binaganj","Chhatarpur","Chhindwara","Damoh","Datia","Dewas","Dhar","Dindori","Guna","Gwalior","Harda","Hoshangabad","Indore","Jabalpur","Jhabua","Katni","Khandwa (East Nimar)","Khargone (West Nimar)","Maihar","Mandla","Mandsaur","Morena","Narsinghpur","Nagda","Neemuch","Niwari","Panna","Raisen","Rajgarh","Ratlam","Rewa","Sagar","Satna","Sehore","Seoni","Shahdol","Shajapur","Sheopur","Shivpuri","Sidhi","Singrauli","Tikamgarh","	Ujjain","Umaria","Vidisha"],
+        Maharashtra:["Choose Your District","Ahmednagar","Akola","Amravati","Aurangabad","Beed","Bhandara","Buldhana","Chandrapur","Dhule","Gadchiroli","Gondia","Hingoli","Jalgaon","Jalna","Kolhapur","Latur","Mumbai City","Mumbai suburban","Nanded","Nandurbar","Nagpur","Nashik","Osmanabad","Palghar","Parbhani","Pune","Raigad","Ratnagiri","Sangli","Satara","Sindhudurg","	Solapur","Thane","Wardha","Washim","Yavatmal"],
+        Manipur:["Choose Your District","Bishnupur","Chandel","Churachandpur","Imphal East","Imphal West","Jiribam","Kakching","Kamjong","Kangpokpi","Noney","Pherzawl","Senapati","Tamenglong","Thoubal","Ukhrul"],
+        Meghalaya:["Choose Your District","East Garo Hills","East Khasi Hills","East Jaintia Hills","North Garo Hills","Ri Bhoi","South Garo Hills","South West Khasi Hills","West Jaintia Hills","West Garo Hills","West Khasi Hills"],
+        Mizoram:["Choose Your District","Aizawl","Champhai","Hnahthial","Khawzawl","Kolasib","Lawngtlai","Lawngtlai","Mamit","Saiha","Saitual","Serchhip"],
+        Nagaland:["Choose Your District","Dimapur","Kiphire","Kohima","Longleng","Mokokchung","Mon","Noklak","Peren","Phek","Tuensang","Wokha","Zunheboto"],
+        Odisha:["Choose Your District","Angul","Boudh (Bauda)","Bhadrak","Balangir","Bargarh (Baragarh)","Balasore","Cuttack","Debagarh (Deogarh)","Dhenkanal","Ganjam","Gajapati","Jharsuguda","Jajpur","Jagatsinghpur","Khordha","Kendujhar (Keonjhar)","Kalahandi","Kandhamal","Koraput","Kendrapara","Malkangiri","Mayurbhanj","Nabarangpur","Nuapada","Nayagarh","Puri","Rayagada","Sambalpur","Subarnapur (Sonepur)","Sundargarh"],
+        Puducherry:["Choose Your District","Karaikal","Mahe","Pondicherry","Yanam"],
+        Punjab:["Choose Your District","Amritsar","Barnala","Bathinda","Firozpur","Faridkot","Fatehgarh Sahib","Fazilka","Gurdaspur","Hoshiarpur","Jalandhar","Kapurthala","Ludhiana","Mansa","Moga","Sri Muktsar Sahib","Pathankot","Patiala","Rupnagar","Sahibzada Ajit Singh Nagar","Sangrur","Shahid Bhagat Singh Nagar","Tarn Taran"],
+        Rajasthan:["Choose Your District","Ajmer","Alwar","Bikaner","Barmer","Banswara","Bharatpur","Baran","Bundi","Bhilwara","Churu","Chittorgarh","Dausa","Dholpur","Dungarpur","Ganganagar","Hanumangarh","Jhunjhunu","Jalore","Jodhpur","Jaipur","Jaisalmer","Jhalawar","Karauli","Kota","Nagaur","Pali","Pratapgarh","Rajsamand","Sikar","Sawai Madhopur","Sirohi","Tonk","Udaipur"],
+        Sikkim:["Choose Your District","East Sikkim","North Sikkim","South Sikkim","West Sikkim"],
+        Tamil_Nadu:["Choose Your District","Ariyalur","Chengalpattu","Chennai","Coimbatore","Cuddalore","Dharmapuri","Dindigul","Erode","Kallakurichi","Kanchipuram","Kanyakumari","Karur","Krishnagiri","Madurai","Mayiladuthurai","Nagapattinam","Nilgiris","Namakkal","Perambalur","Pudukkottai","Ramanathapuram","Ranipet","Salem","Sivaganga","Tenkasi","Tirupur","Tiruchirappalli","Theni","Tirunelveli","Thanjavur","Thoothukudi","Tirupattur","Tiruvallur","Tiruvarur","Tiruvannamalai","Vellore","Viluppuram","Virudhunagar"],
+        Telangana:["Choose Your District","Adilabad","Bhadradri Kothagudem","Hyderabad","Jagtial","Jangaon","Jayashankar Bhupalpally","Jogulamba Gadwal","Kamareddy","Karimnagar","Khammam","Komaram Bheem","Mahabubabad","Mahbubnagar","Mancherial","Medak","Medchal-Malkajgiri","Mulugu","Nagarkurnool","Nalgonda","Narayanpet","Nirmal","Nizamabad","Peddapalli","Rajanna Sircilla","Ranga Reddy","Sangareddy","Siddipet","Suryapet","Vikarabad","Wanaparthy","Warangal Urban","Warangal Rural","Yadadri Bhuvanagiri"],
+        Tripura:["Choose Your District","Dhalai","Gomati","Khowai","North Tripura","Sepahijala","South Tripura","Unokoti","West Tripura"],
+        Uttar_Pradesh:["Choose Your District","Agra","Aligarh","Allahabad","Ambedkar Nagar","Amethi","Amroha","Auraiya","Azamgarh","Bagpat","Bahraich","Ballia","Balrampur","Banda","Barabanki","Bareilly","Basti","Bhadohi","Bijnor","Budaun","Bulandshahr","Chandauli","Chitrakoot","Deoria","Etah","Etawah","Faizabad","Farrukhabad","Fatehpur","Firozabad","Gautam Buddh Nagar","Ghaziabad","Ghazipur","Gonda","Gorakhpur","Hamirpur","Hapur","Hardoi","Hathras","Jalaun","Jaunpur","Jhansi","Kannauj","Kanpur Dehat","Kanpur Nagar","Kasganj","Kaushambi","Kushinagar","Lakhimpur Kheri","Lalitpur","Lucknow","Maharajganj","Mahoba","Mainpuri","Mathura","Mau","Meerut","Mirzapur","Moradabad","Muzaffarnagar","Pilibhit","Pratapgarh","Raebareli","Rampur","Saharanpur","Sambhal","Sant Kabir Nagar","Shahjahanpur","Shamli","Shravasti","Siddharthnagar","Sitapur","Sonbhadra","Sultanpur","Unnao","Varanasi"],
+        Uttarakhand:["Choose Your District","Almora","Bageshwar","Chamoli","Champawat","Dehradun","Haridwar","Nainital","Pauri Garhwal","Pithoragarh","Rudraprayag","Tehri Garhwal","Udham Singh Nagar","Uttarkashi"],
+        West_Bengal:["Choose Your District","Alipurduar","Bankura","Birbhum","Cooch Behar","Dakshin Dinajpur","Darjeeling","Hooghly","Howrah","Jalpaiguri","Jhargram","Kalimpong","Kolkata","Maldah","Murshidabad","Nadia","North 24 Parganas","Paschim Bardhaman","Paschim Medinipur","Purba Bardhaman","Purba Medinipur","Purulia","South 24 Parganas","Uttar Dinajpur"],
+        
+        }
+        
+        
+        function makeSubmenu(value) {
+        if(value.length==0) document.getElementById("districtSelect").innerHTML = "<option></option>";
+        else {
+        var districtOptions = "";
+        for(districtId in statebyDistrict[value]) {
+            districtOptions+="<option>"+statebyDistrict[value][districtId]+"</option>";
+        }
+        document.getElementById("districtSelect").innerHTML = districtOptions;
+        }
+        }
+        
+        function displaySelected() { var state = document.getElementById("stateSelect").value;
+        var district = document.getElementById("districtSelect").value;
+        alert(state+"\n"+district);
+        }
+        
+        function resetSelection() {
+            console.log("body loaded");
+        document.getElementById("stateSelect").selectedIndex = 0;
+        document.getElementById("districtSelect").selectedIndex = 0;
+        }
+        
+        </script>
+
+
+</head>
+<body onload="resetSelection()">
+
+    <!-- beginning of the navbar  -->
+
+
+    
+    <nav class="navbar">
+        
+        <div class="brand-title"><a href="index.html"><img class="mainLogoImage" src="images/mainLogo.png" alt="logo" width="50px">Need<span class="covidred">Covid</span>Plasma.in</a></div>
+        <a href="#" class="toggle-button">
+            <span class="bar" id="span1"></span>
+            <span class="bar" id="span2"></span>
+            <span class="bar" id="span3"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+              <li><a href="donor_form.html">Donate Plasma</a></li>
+              <li><a href="patient_form.html">Request Plasma</a></li>
+              <li><a href="volunteer_form.html">Volunteer</a></li>
+              <li><a href="index.html#ourmission_Id">Our Mission</a></li>
+              <li><a href="index.html#othersites_Id">Other Sites</a></li>
+              <li><a href="index.html#contact_form_id">Contact Us</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Donor form  -->
+
+    <section class="contactForm_Section">
+        <div class="contactForm_container">
+
+          <p class="patient_info">Fill the form if you are looking to get the plasma therapy for your loved one.We wil do our best in finding matched donors and tell you immediately if there are any donors matching your requirement at present.We also provide you with an option of sending alert among the group of our volunteers,thereby increasing the chance of finding a donor.This form will only take you a minute to complete.</p>
+          <p class="patient_info">Please note that <b>needcovidplasma.in</b> is only a platform connecting you with donors,we are not responsible for any discrepency in the provided information</p>
+          <div class="contactForm_wrapper">
+            <div class="contactForm_contact-info">
+                <h1 class="contactForm_brand"><span>Patient's</span> <br>registration form</h1>
+            </div>
+            <div class="contactForm_contact">
+              <h3>Fill here </h3>
+              
+              <form id="contactForm_contactForm">
+                <p class="full">
+                  <label>Name</label>
+                  <input type="text" name="name" id="name" required>
+                </p>
+
+   <!-- for ka added part -->
+
+                <p class="full">
+                    <label>Age</label>
+                    <input type="number" name="age" id="age" required>
+                </p>
+                
+                <p class="full">
+                    <label>Sex</label>
+                    <select name="sex" id="sex">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">Others</option>
+                    </select>
+                </p>
+
+                <p class="full">
+                    <label>Blood Group needed</label>
+                    <select name="bloodGroup" id="bloodGroup">
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </p>
+
+                <p class="full">
+                    <select id="stateSelect" size="1" onchange="makeSubmenu(this.value)">
+                        <option value="" disabled selected>Choose your State</option>
+                        <option>Andaman_and_Nicobar_Islands</option>
+                        <option>Andhra_Pradesh</option>
+                        <option>Arunachal_Pradesh</option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                        <option>Chandigarh</option>
+                        <option>Chhattisgarh</option>
+                        <option>Dadra_and_Nagar_Haveli_and_Daman_and_Diu</option>
+                        <option>Delhi</option>
+                        <option>Goa</option>
+                        <option>Gujarat</option>
+                        <option>Haryana</option>
+                        <option>Himachal_Pradesh</option>
+                        <option>Jammu_and_Kashmir</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                        <option>Ladakh</option>
+                        <option>Lakshadweep</option>
+                        <option>Madhya_Pradesh</option>
+                        <option>Maharashtra</option>
+                        <option>Manipur</option>
+                        <option>Meghalaya</option>
+                        <option>Mizoram</option>
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
+                        <option>Puducherry</option>
+                        <option>Punjab</option>
+                        <option>Rajasthan</option>
+                        <option>Sikkim</option>
+                        <option>Tamil_Nadu</option>
+                        <option>Telangana</option>
+                        <option>Tripura</option>
+                        <option>Uttar_Pradesh</option>
+                        <option>Uttarakhand</option>
+                        <option>West_Bengal</option>
+
+                        </select>
+                </p>
+
+                <p class="full">
+                        <select id="districtSelect" size="1" >
+                        <option value="" disabled selected>Choose your district</option>
+                        <option></option>
+                        </select>
+                        <!-- <button onclick="displaySelected()">show selected</button> -->
+                </p>
+
+                <p class="full">
+                  <label>Email Address</label>
+                  <input type="email" name="email" id="email" required>
+                </p>
+                <p class="full">
+                  <label>Phone Number</label>
+                  <input type="text" name="phone" id="phone">
+                </p>
+                <p class="full">
+                  <label>Address (Hospital Address)</label>
+                  <textarea name="Address" rows="5" id="address"></textarea>
+                </p>
+                
+                <p class="confirmation_submit full">By submitting the form,you confirm that you have gone through the above mentioned details </p>
+
+                <p class="full">
+                  <button type="submit">Submit</button>
+                </p>
+
+                <div class="contactForm_alert">You request has been registered</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- this is results section   -->
+
+      <section class="results">
+         <h1 class="results_section_heading">Matching donors as per your request</h1>
+
+         <label class="matched_donors_data" id="matched_donors_data_id">Please fill the above form for getting the matched plasma donors</label>
+       
+         <br>
+         <br>
+
+         <div class="mail_to_volunteer">
+             <p class="mail_to_vol_info">Send alerts to our volunteers</p>
+             <p class="mail_to_vol_info_second_line">By clicking here, your request will be sent via mail to a group of registered volunteers to help spread your requirement thereby increasing the chance of finding a donor</p>
+             <button class="mail_alert_button" onclick=send_mails_to_volunteers()>Send alert</button>
+
+             <p class="mailing_confirmation" id="mailing_confirmation_id"></p>
+             
+         </div>
+
+      </section>
+
+    <!-- this is  a footer  -->
+    <footer>
+        <div class="footerclass"> 
+            <div class="footerTagline">
+                Let's together fight the war against <span class="covidred">Covid</span> 
+            </div>
+            
+            <div class="footerCopyRight">
+                Copyright © 2020 <a href="index.html"> Need <span class="covidred">Covid</span>Plasma.in</a> 
+            </div>
+            
+            <div class="footerHopeBest">
+                <span >Hope for the best</span>
+            </div> 
+        </div>
+    </footer>
+
+    <!-- js files extensions linking  -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script> 
+
+    <script src="js/forms_resp.js"></script>
+    <script src="js/patient_form_js.js"></script>
+    <!-- <script src="result_part.js"></script> -->
+</body>
+</html>

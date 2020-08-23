@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="covid-19 plasma donors and patients connecting platform">
+    <meta name="keywords" content="COID-19,Plasma,HTML,CSS,JavaScript,Donors,Patients,Volunteers">
+    <title>NeedCovidPlasma</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/mainLogo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+</head>
+<body onload="loadData()">
+
+    <!-- beginning of the navbar  -->
+    
+    <nav class="navbar">
+        
+        <div class="brand-title"><a href="index.html"><img class="mainLogoImage" src="images/mainLogo.png" alt="logo" width="50px">Need<span class="covidred">Covid</span>Plasma.in</a></div>
+        <a href="#" class="toggle-button">
+            <span class="bar" id="span1"></span>
+            <span class="bar" id="span2"></span>
+            <span class="bar" id="span3"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="donor_form.html">Donate Plasma</a></li>
+                <li><a href="patient_form.html">Request Plasma</a></li>
+                <li><a href="volunteer_form.html">Volunteer</a></li>
+                <li><a href="#ourmission_Id">Our Mission</a></li>
+                <li><a href="#othersites_Id">Other Sites</a></li>
+                <li><a href="#contact_form_id">Contact Us</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Begginng of the main section  -->
+
+    <section>
+        <div class="mainSection_services">
+             <!-- <h1>NeedCovidPlasma.in</h1>  -->
+             
+                <p class="mainline"><span class="boldMainSection">Need<span class="covidred">Covid</span>Plasma.in</span> 
+                is a platform intended to connect eligible <b>Donors</b>,<b>Recipients</b> and <b>Volunteers</b> across India</p>
+                <p class="submainline">Plasma from recovered COVID-19 patients is urgently needed across hospitals in India.</p>
+                <p class="subsubmainline">
+                    Convalescent plasma  therapy is an experimental procedure, that some doctors are using for people with severe corona virus disease 2019.<br>Please get advised from your treating doctor.
+                </p>
+
+            <div class="mainSection_cen">
+                <div class="mainSection_service">
+                    <h2>Be a plasma donor and save a life</h2>
+                    <a href="donor_form.html"><button class="button">Donate Plasma</button></a>
+                </div>
+
+                <div class="mainSection_service">
+                    <h2>Looking for plasma donor </h2>
+                    <a href="patient_form.html"><button class="button">Request plasma</button></a>
+                </div>
+
+                <div class="mainSection_service">
+                    <h2>Join as a Volunteer and be a part in our mission</h2>
+                    <a href="volunteer_form.html"><button class="button">Be a Volunteer</button></a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- impacts section  -->
+
+    <section>
+        <div class="services">
+            <h1>Our impact so far</h1>
+            <div class="cen">
+                <div class="service">
+                    <h2>Donors <span class="blink"><sup><sup>&#128308;</sup></sup></span></h2>
+                    <p id="no_of_donors"></p>
+                </div>
+
+                <div class="service">
+                    <h2>Requests <span class="blink"><sup><sup>&#128308;</sup></sup></span></h2>
+                    <p id="no_of_requests"></p>
+                </div>
+
+                <div class="service">
+                    <h2>Volunteers <span class="blink"><sup><sup>&#128308;</sup></sup></span></h2>
+                    <p id="no_of_volunteers"></p>
+                </div>
+
+                <div class="service">
+                    <h2>Last donor registered <span class="blink"><sup><sup>&#128308;</sup></sup></span></h2>
+                    <p id="last_time_of_donor"></p>
+                </div>
+
+                <div class="service">
+                    <h2>Last request made <span class="blink"><sup><sup>&#128308;</sup></sup></span></h2>
+                    <p id="last_time_of_request"></p>
+                </div>
+
+                <div class="service">
+                    <h2>Last volunteer registered <span class="blink"><sup><sup>&#128308;</sup></sup></span></h2>
+                    <p id="last_time_of_volunteer"></p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- This is our mission section  -->
+
+    <section class="missionSection" id="ourmission_Id">
+        <div class="missionSection_container">
+            <h1>Our Mission</h1>
+            <p class="mission_para">NeedCovidPlasma.in is an individual organization and a platform intended to connect donors,recepients and volunteers</p>
+            <p class="mission_para">The country has seen large scale devastation as an effect of COVID-19.Plasma from those who have recovered could be a key part of the fight against COVID-19.<br>We know how terrifying it is to run from pillar to post to find the right blood donor, in the absence of an obvious place or institution to reach out to.<br>NeedCovidplasma.in has been created to make sure this crucial time isn’t wasted in looking in the wrong place. In a situation where time is of great essence,<br>NeedCovidplasma.in is a small initiative towards solving the problem of finding eligible donors.<br>We at "NeedCovidplasma.in" aspire to connect you with eligible donors.<br>We built this platform to serve anyone in need, and hence do not support any monetization of plasma donation.<br>We sincerely hope that this bridge which we have named "NeedCovidplasma" will make an impact and help saving lives of your loved ones.</p>
+            <h1>Our Policy</h1>
+            <p class="policy_para">We "NeedCovidplasma.in" are just an online platform aimed at connecting volunteers,plasma donors and recipients together.<br>We are not into any medical services such as testing,plasma transfusion or etc.<br>We neither engage ourselves into any monetary benifits nor do we promote any monetary transaction among the volunteers, donors and recipients.<br>We just act as a bridge and are not liable to any discrepency in the information provided by the donors or the patients.</p>
+            
+        </div>
+    </section>
+
+    <!-- This is for other sites  -->
+
+    <section id="othersites_Id">
+        <div class="otherSites_services">
+            <h1>Other Plasma Connecting sites</h1>
+            <div class="otherSites_cen">
+                <a href="https://www.dhoondh.com/">
+                    <div class="otherSites_service">
+                        <h2>Doondh</h2>
+                    </div>
+                </a>
+
+                <a href="https://needplasma.in/">
+                    <div class="otherSites_service">
+                        <h2>Need Plasma.in</h2>
+                    </div>
+                </a>
+
+                <a href="https://plasmadonor.in/">
+                    <div class="otherSites_service">
+                        <h2>Plasmadonor.in</h2>
+                    </div>
+                </a>
+
+                <a href="https://plasmayoddha.in/">
+                    <div class="otherSites_service">
+                        <h2>plasmayoddha.in</h2>
+                    </div>
+                </a>
+
+                <a href="https://plasmaline.in/">
+                    <div class="otherSites_service">
+                        <h2>Plasmaline.in</h2>
+                    </div>
+                </a>
+
+                <a href="https://workflow-au.signavio.com/public/start-form/5ef82fc63623895e0219860a">
+                    <div class="otherSites_service">
+                        <h2>KAB Welfare Foundation Initiative</h2>
+                    </div>
+                </a>
+                
+                <a href="https://covidplasma.in/">
+                    <div class="otherSites_service">
+                        <h2>Covidplasma.in</h2>
+                    </div>
+                </a>
+
+                <!-- <a href="https://www.dhoondh.com/">
+                    <div class="otherSites_service">
+                        <h2>Doondh</h2>
+                    </div>
+                </a>
+
+                <a href="https://www.dhoondh.com/">
+                    <div class="otherSites_service">
+                        <h2>Doondh</h2>
+                    </div> -->
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- This is a contact form section  -->
+    
+    <section class="contactForm_Section" id="contact_form_id">
+        <div class="contactForm_container">
+          <div class="contactForm_wrapper">
+            <div class="contactForm_contact-info">
+              <h1 class="contactForm_brand">Contact Us</h1>
+              <p >For any queries,suggestion or feedback</p>  
+             
+            </div>
+            <div class="contactForm_contact">
+              <h3>Fill here </h3>
+              <div class="contactForm_alert">Your message has been sent</div>
+              <form id="contactForm_contactForm">
+                <p class="full">
+                  <label>Name</label>
+                  <input type="text" name="name" id="name" required>
+                </p>
+             
+                <p class="full">
+                  <label>Email Address</label>
+                  <input type="email" name="email" id="email" required>
+                </p>
+                <p class="full">
+                  <label>Phone Number</label>
+                  <input type="text" name="phone" id="phone">
+                </p>
+                <p class="full">
+                  <label>Message</label>
+                  <textarea name="message" rows="5" id="message"></textarea>
+                </p>
+                <p class="full">
+                  <button type="submit">Submit</button>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+
+    <!-- this is  a footer  -->
+    <footer>
+        <div class="footerclass"> 
+            <div class="footerTagline">
+                Let's together fight the war against <span class="covidred">Covid</span> 
+            </div>
+            
+            <div class="footerCopyRight">
+                Copyright © 2020 <a href="index.html"> Need <span class="covidred">Covid</span>Plasma.in</a> 
+            </div>
+            
+            <div class="footerHopeBest">
+                <span >Hope for the best</span>
+            </div> 
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+    
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/resp.js"></script>
+
+</body>
+</html>
