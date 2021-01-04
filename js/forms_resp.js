@@ -10,7 +10,7 @@ toggleBtn.addEventListener('click',()=>{
 
 //   // Listen for form submit
 //   document.getElementById('contactForm_contactForm').addEventListener('submit', submitForm);
-  
+   
 //   // Submit form
 //   function submitForm(e){
 //     console.log("submit of the contact form has been clicked")

@@ -6,6 +6,12 @@ body{
     margin:0px;
     padding:0px;
 }
+ 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 
 .navbar{
     /* position: fixed; */
@@ -340,6 +346,7 @@ body{
     background-color:white;
     text-align: center;
     justify-content: center;
+    padding: 30px;
     /* border:2px solid red; */
 }
 

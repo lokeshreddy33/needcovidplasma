@@ -15,7 +15,7 @@
 
     <!-- beginning of the navbar  -->
     
-    <nav class="navbar">
+    <nav class="navbar" id="navbarHeader">
         
         <div class="brand-title"><a href="index.html"><img class="mainLogoImage" src="images/mainLogo.png" alt="logo" width="50px">Need<span class="covidred">Covid</span>Plasma.in</a></div>
         <a href="#" class="toggle-button">
@@ -110,7 +110,6 @@
             </div>
         </div>
     </section>
-
     
     <!-- This is our mission section  -->
 
@@ -129,6 +128,7 @@
 
     <section id="othersites_Id">
         <div class="otherSites_services">
+            
             <h1>Other Plasma Connecting sites</h1>
             <div class="otherSites_cen">
                 <a href="https://www.dhoondh.com/">
@@ -188,7 +188,6 @@
         </div>
     </section>
 
-
     <!-- This is a contact form section  -->
     
     <section class="contactForm_Section" id="contact_form_id">
@@ -247,12 +246,29 @@
         </div>
     </footer>
 
-    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
     
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/resp.js"></script>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("navbarHeader");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+        </script>
+        
 
 </body>
 </html>

@@ -10,6 +10,19 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+ 
+// var firebaseConfig = {
+//   apiKey: "AIzaSyAljT9NeVJoBqe9cNnVJGW86b49Fhe7ejI",
+//   authDomain: "data-c2f9c.firebaseapp.com",
+//   databaseURL: "https://data-c2f9c.firebaseio.com",
+//   projectId: "data-c2f9c",
+//   storageBucket: "data-c2f9c.appspot.com",
+//   messagingSenderId: "706767781996",
+//   appId: "1:706767781996:web:f66f84fd4775592c135849",
+//   measurementId: "G-ES9NZ74P0W"
+// };
+// // Initialize Firebase
+// firebase.initializeApp(firebaseConfig);
   
   // Reference messages collection
   var messagesRef = firebase.database().ref('NeedCovidPlasmaData');
@@ -40,12 +53,21 @@ firebase.initializeApp(firebaseConfig);
   
     // Show alert
     document.querySelector('.contactForm_alert').style.display = 'block';
-  
+    // document.querySelector('#your_result').style.display = 'none';
+    document.getElementById("result_btn").innerHTML="processing...";
+
     // Hide alert after 3 seconds
     setTimeout(function(){
-      document.querySelector('.contactForm_alert').style.display = 'none';
-    },3000);
+      document.querySelector('.contactForm_alert').style.display = 'block';
+      document.getElementById("result_btn").innerHTML="Results here";
+    },1000);
+
+    // setTimeout(function(){
+    //   document.querySelector('#your_result').style.display = 'block';
+    // },3000);
   
+    // document.querySelector('#your_result').style.display = 'block';
+
     //Redirecting you to the main page
     // location.replace("https://www.w3schools.com")
     // Clear form
@@ -185,8 +207,7 @@ var address = getInputVal('address');
   var volunteer_mail_str="";
   for(volunteer_mail_str of volunteer_mail_arr){
     volunter_alerts_mails_sending(name,age,sex,bloodGroup,state,district,email,phone,address,volunteer_mail_str);
-    // console.log("mail id");
-    // console.log(volunteer_mail_str);
+
   }
   
 

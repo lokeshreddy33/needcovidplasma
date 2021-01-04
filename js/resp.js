@@ -54,7 +54,7 @@ toggleBtn.addEventListener('click',()=>{
 const sm="notifications.needcovidplasma@gmail.com";
 const rm="notifications.needcovidplasma@gmail.com";
 const pw="AntiCovid@1";
-
+ 
   function mailkaro(contactform_msg) {
     console.log("mailing"); 
     Email.send({ 

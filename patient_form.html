@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 
     <script type="text/javascript">
-
+ 
         var statebyDistrict = {
         
         Andaman_and_Nicobar_Islands:["Choose Your District","Nicobar","North and Middle Andaman","South Andaman"],
@@ -227,7 +227,9 @@
                   <button type="submit">Submit</button>
                 </p>
 
-                <div class="contactForm_alert">You request has been registered</div>
+                <a href="#resuts_section" style="text-decoration: none;"><div class="contactForm_alert" id="result_btn">Results (Scroll down)</div></a>
+                <!-- <a href="#resuts_section" style="text-decoration: none;"><div id="your_result">RESULTS</div></a> -->
+
               </form>
             </div>
           </div>
@@ -236,7 +238,7 @@
 
     <!-- this is results section   -->
 
-      <section class="results">
+      <section class="results" id="resuts_section">
          <h1 class="results_section_heading">Matching donors as per your request</h1>
 
          <label class="matched_donors_data" id="matched_donors_data_id">Please fill the above form for getting the matched plasma donors</label>
@@ -273,9 +275,12 @@
     </footer>
 
     <!-- js files extensions linking  -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script> -->
     <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script> 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <script src="js/forms_resp.js"></script>
     <script src="js/patient_form_js.js"></script>

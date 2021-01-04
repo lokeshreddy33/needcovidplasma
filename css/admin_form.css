@@ -123,6 +123,15 @@ body{
     background:white;
   } */
   
+  #main_form{
+    display:none;
+  }
+
+  #wrongpw{
+    display: none;
+    color: red;
+  }
+
   .contactForm_container{
     /* padding-bottom: 20px; */
     /* background:white; */

@@ -10,6 +10,19 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+ 
+// var firebaseConfig = {
+//   apiKey: "AIzaSyC4E5MjaQmSe9wxWfBUBtha7aR7DUYbQ1c",
+//   authDomain: "needcovidplasma-data.firebaseapp.com",
+//   databaseURL: "https://needcovidplasma-data.firebaseio.com",
+//   projectId: "needcovidplasma-data",
+//   storageBucket: "needcovidplasma-data.appspot.com",
+//   messagingSenderId: "866919410680",
+//   appId: "1:866919410680:web:9e64b94372fa2dc1a1840d",
+//   measurementId: "G-GBLSQ8B5CW"
+// };
+// // Initialize Firebase
+// firebase.initializeApp(firebaseConfig);
   
   // Reference messages collection
   var messagesRef = firebase.database().ref('NeedCovidPlasmaData');
